@@ -5,6 +5,8 @@
 
 	public sealed class SceneInstaller : MonoInstaller
 	{
+		[Inject] GameplayConfig _gameplayConfig;
+		
 		public override void InstallBindings()
 		{
 			// HeroFacade
@@ -12,6 +14,14 @@
 				.BindInterfacesTo<HeroFacade>()
 				.FromComponentInHierarchy()
 				.AsSingle();
+			
+			// Bullet Pool
+			Container
+				.BindMemoryPool< Bullet, Bullet.Pool >()
+				.WithInitialSize( 15 )
+				.ExpandByOneAtATime()
+				.FromComponentInNewPrefab( _gameplayConfig.BulletPrefab )
+				.UnderTransformGroup( "Bullet Pool" );
 		}
 	}
 }
