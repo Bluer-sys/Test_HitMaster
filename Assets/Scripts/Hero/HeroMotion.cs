@@ -7,6 +7,7 @@
 	using UnityEngine.AI;
 	using Zenject;
 
+	[RequireComponent(typeof(NavMeshAgent))]
 	public sealed class HeroMotion : MonoBehaviour
 	{
 		[SerializeField] List<Waypoint> _waypoints;

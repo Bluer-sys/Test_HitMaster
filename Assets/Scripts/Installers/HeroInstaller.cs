@@ -1,6 +1,7 @@
 ﻿namespace Game.Installers
 {
 	using Game.Hero;
+	using UnityEngine;
 	using UnityEngine.AI;
 	using Zenject;
 
@@ -8,6 +9,12 @@
 	{
 		public override void InstallBindings()
 		{
+			// Animator
+			Container
+				.Bind<Animator>()
+				.FromComponentInHierarchy()
+				.AsSingle();
+			
 			// NavMeshAgent
 			Container
 				.Bind<NavMeshAgent>()
