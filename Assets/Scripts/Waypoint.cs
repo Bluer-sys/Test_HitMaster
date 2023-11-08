@@ -1,14 +1,25 @@
 ﻿namespace Game
 {
+	using System;
+	using Game.Enemy;
 	using System.Collections.Generic;
+	using System.Linq;
 	using UniRx;
 	using UnityEngine;
 
 	public sealed class Waypoint : MonoBehaviour
 	{
-		[SerializeField] List<Enemy.Enemy> _enemies;
+		[SerializeField] List<EnemyFacade> _enemies;
 
-		public ReactiveCommand OnAllEnemyKilled { get; } = new();
-		public bool IsAllEnemyKilled => _enemies.TrueForAll( e => e.IsDead );
+		public IObservable<Unit> OnAllEnemyKilled { get; private set; }
+
+		void Start()
+		{
+			// On All Enemy Killed
+			OnAllEnemyKilled = _enemies
+				.Select( e => e.IsDead )
+				.CombineLatestValuesAreAllTrue()
+				.AsUnitObservable();
+		}
 	}
 }

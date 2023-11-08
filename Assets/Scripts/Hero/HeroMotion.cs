@@ -40,7 +40,7 @@
 				IsMoving.Value = false;
 				Debug.Log( $"IsMoving: {IsMoving.Value}" );
 
-				//yield return new WaitUntil( () => waypoint.IsAllEnemyKilled );
+				//yield return waypoint.OnAllEnemyKilled.First();
 				yield return new WaitForSeconds( 3f );
 
 				_current ++;
