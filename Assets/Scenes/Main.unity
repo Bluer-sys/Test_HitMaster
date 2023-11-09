@@ -743,44 +743,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9d62fc811874c9c9b912437b2ed1708, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &485744940 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5043152646368322985, guid: b2e6e50ee1cec4244bc789cb3ab218bb, type: 3}
-  m_PrefabInstance: {fileID: 5043845033913226247}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &485744943 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5040035924361689677, guid: b2e6e50ee1cec4244bc789cb3ab218bb, type: 3}
   m_PrefabInstance: {fileID: 5043845033913226247}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &485744949
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 485744940}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26066947df5b41cf85578a94028aca46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _waypoints:
-  - {fileID: 8643572232007017205}
-  - {fileID: 26835157}
-  - {fileID: 2030858945}
---- !u!114 &485744950
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 485744940}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8cf029f6ce44465db589404d2954a199, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &512607504
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1163,7 +1130,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.18475415, y: -0.000000014644636, z: 0.0000000027530516, w: 0.9827848}
+  m_LocalRotation: {x: 0.18475415, y: -4.899366e-16, z: 9.254791e-17, w: 0.9827848}
   m_LocalPosition: {x: -1.388, y: 16.244463, z: -3.9337056}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2147,7 +2114,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1791641594}
-  m_LocalRotation: {x: 0.18475415, y: -0.000000014644636, z: 0.0000000027530516, w: 0.9827848}
+  m_LocalRotation: {x: 0.18475415, y: -4.899366e-16, z: 9.254791e-17, w: 0.9827848}
   m_LocalPosition: {x: -1.888, y: 14.381, z: -4.66}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2846,15 +2813,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 485744944, guid: b2e6e50ee1cec4244bc789cb3ab218bb, type: 3}
+    - target: {fileID: 485744949, guid: b2e6e50ee1cec4244bc789cb3ab218bb, type: 3}
       propertyPath: _waypoints.Array.data[0]
       value: 
       objectReference: {fileID: 8643572232007017205}
-    - target: {fileID: 485744944, guid: b2e6e50ee1cec4244bc789cb3ab218bb, type: 3}
+    - target: {fileID: 485744949, guid: b2e6e50ee1cec4244bc789cb3ab218bb, type: 3}
       propertyPath: _waypoints.Array.data[1]
       value: 
       objectReference: {fileID: 26835157}
-    - target: {fileID: 485744944, guid: b2e6e50ee1cec4244bc789cb3ab218bb, type: 3}
+    - target: {fileID: 485744949, guid: b2e6e50ee1cec4244bc789cb3ab218bb, type: 3}
       propertyPath: _waypoints.Array.data[2]
       value: 
       objectReference: {fileID: 2030858945}

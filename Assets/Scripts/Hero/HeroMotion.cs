@@ -2,6 +2,7 @@
 {
 	using System.Collections;
 	using System.Collections.Generic;
+	using Game.Input;
 	using UniRx;
 	using UnityEngine;
 	using UnityEngine.AI;
@@ -13,6 +14,7 @@
 		[SerializeField] List<Waypoint>		_waypoints;
 		
 		[Inject] readonly NavMeshAgent		_agent;
+		[Inject] readonly IPlayerInput		_playerInput;
 		[Inject] readonly GameplayConfig	_gameplayConfig;
 
 		int _current;
@@ -32,6 +34,10 @@
 		
 		IEnumerator Motion_Cor()
 		{
+			// Await Screen Tap
+			yield return _playerInput.OnScreenClick.First().ToYieldInstruction();
+			
+			// Waypoints Movement
 			while ( _current < _waypoints.Count )
 			{
 				Waypoint waypoint = _waypoints[_current];
@@ -50,6 +56,7 @@
 				_current ++;
 			}
 
+			// Finish Reached
 			OnAllWaypointsReached.Execute();
 		}
 		
