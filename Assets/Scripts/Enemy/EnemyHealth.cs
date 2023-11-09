@@ -7,31 +7,28 @@
 	{
 		[SerializeField] int _health;
 		
-		int _curHealth;
-
 		void Start()
 		{
-			_curHealth = _health;
+			Current.Value = _health;
 		}
 
-		public BoolReactiveProperty IsDead { get; } = new();
-
+		public BoolReactiveProperty IsDead		{ get; } = new();
+		
+		public FloatReactiveProperty Current	{ get; } = new();
+		
+		public float Max						=> _health;
+		
+		
 #region IDamagable
 
 		public void TakeDamage(int damage)
 		{
-			_curHealth = Mathf.Clamp( _curHealth - damage, 0, _health );
+			Current.Value = Mathf.Clamp( Current.Value - damage, 0, _health );
 
-			if ( _curHealth == 0 )
+			if ( Current.Value == 0 )
 				IsDead.Value = true;
 		}
 
 #endregion
-
-		[ContextMenu("Kill")]
-		void SetDead_Debug()
-		{
-			IsDead.Value = true;
-		}
 	}
 }

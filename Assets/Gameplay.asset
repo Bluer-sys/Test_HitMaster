@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Gameplay
   m_EditorClassIdentifier: 
   HeroSpeed: 5
+  EnemyThrowForce: 5
   BulletPrefab: {fileID: 596513481158253625, guid: 6db56ee4ef173df4ab17a13bb0b986e3, type: 3}
-  BulletSpeed: 15
+  BulletSpeed: 35
   BulletDamage: 1
   BulletLifetime: 3
-  EnemyThrowForce: 5
