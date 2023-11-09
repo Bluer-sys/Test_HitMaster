@@ -1,4 +1,4 @@
-﻿namespace Input
+﻿namespace Game.Input
 {
 	using UniRx;
 	using UnityEngine;

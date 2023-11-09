@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b25d3159d7f4e219b45390359c594d5, type: 3}
   m_Name: Gameplay
   m_EditorClassIdentifier: 
+  HeroSpeed: 5
   BulletPrefab: {fileID: 596513481158253625, guid: 6db56ee4ef173df4ab17a13bb0b986e3, type: 3}
   BulletSpeed: 15
   BulletDamage: 1

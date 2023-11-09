@@ -10,14 +10,17 @@
 	[RequireComponent(typeof(NavMeshAgent))]
 	public sealed class HeroMotion : MonoBehaviour
 	{
-		[SerializeField] List<Waypoint> _waypoints;
+		[SerializeField] List<Waypoint>		_waypoints;
 		
-		[Inject] readonly NavMeshAgent _agent;
+		[Inject] readonly NavMeshAgent		_agent;
+		[Inject] readonly GameplayConfig	_gameplayConfig;
 
 		int _current;
 		
 		void Start()
 		{
+			_agent.speed = _gameplayConfig.HeroSpeed;
+			
 			StartCoroutine( Motion_Cor() );
 		}
 

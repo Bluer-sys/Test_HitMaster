@@ -7,7 +7,7 @@
 	using UnityEngine;
 	using Zenject;
 
-	public class EnemyRagdollController : MonoBehaviour
+	public sealed class EnemyRagdollController : MonoBehaviour
 	{
 		[SerializeField] Rigidbody			_mainBone;
 
