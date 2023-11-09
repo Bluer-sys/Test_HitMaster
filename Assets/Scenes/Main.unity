@@ -196,6 +196,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 985528677}
     m_Modifications:
+    - target: {fileID: 2166683934145097937, guid: 9b742fdeb4c578f45a5fb5e687162c12, type: 3}
+      propertyPath: _enemies.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2166683934145097937, guid: 9b742fdeb4c578f45a5fb5e687162c12, type: 3}
+      propertyPath: _enemies.Array.data[0]
+      value: 
+      objectReference: {fileID: 383920591}
+    - target: {fileID: 2166683934145097937, guid: 9b742fdeb4c578f45a5fb5e687162c12, type: 3}
+      propertyPath: _enemies.Array.data[1]
+      value: 
+      objectReference: {fileID: 584551200}
+    - target: {fileID: 2166683934145097937, guid: 9b742fdeb4c578f45a5fb5e687162c12, type: 3}
+      propertyPath: _enemies.Array.data[2]
+      value: 
+      objectReference: {fileID: 527255592}
     - target: {fileID: 8400152447859531666, guid: 9b742fdeb4c578f45a5fb5e687162c12, type: 3}
       propertyPath: m_Name
       value: Waypoint (1)
@@ -835,6 +851,28 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4035765028099436, guid: 5527826a6315a224d850675a730c4f62, type: 3}
   m_PrefabInstance: {fileID: 512607504}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &527255592 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1894621662, guid: a057218cc657f2d4894a218c93f36dbb, type: 3}
+  m_PrefabInstance: {fileID: 8554036}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9d62fc811874c9c9b912437b2ed1708, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &584551200 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1894621662, guid: a057218cc657f2d4894a218c93f36dbb, type: 3}
+  m_PrefabInstance: {fileID: 346015725}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9d62fc811874c9c9b912437b2ed1708, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1125,7 +1163,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.18475415, y: -4.899366e-16, z: 9.254791e-17, w: 0.9827848}
+  m_LocalRotation: {x: 0.18475415, y: -0.000000014644636, z: 0.0000000027530516, w: 0.9827848}
   m_LocalPosition: {x: -1.388, y: 16.244463, z: -3.9337056}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2109,7 +2147,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1791641594}
-  m_LocalRotation: {x: 0.18475415, y: -4.899366e-16, z: 9.254791e-17, w: 0.9827848}
+  m_LocalRotation: {x: 0.18475415, y: -0.000000014644636, z: 0.0000000027530516, w: 0.9827848}
   m_LocalPosition: {x: -1.888, y: 14.381, z: -4.66}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
