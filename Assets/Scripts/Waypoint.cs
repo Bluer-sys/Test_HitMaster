@@ -19,6 +19,7 @@
 			OnAllEnemyKilled = _enemies
 				.Select( e => e.IsDead )
 				.CombineLatestValuesAreAllTrue()
+				.Where( v => v )
 				.AsUnitObservable();
 		}
 	}

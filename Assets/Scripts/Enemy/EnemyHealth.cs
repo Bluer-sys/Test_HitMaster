@@ -27,5 +27,11 @@
 		}
 
 #endregion
+
+		[ContextMenu("Kill")]
+		void SetDead_Debug()
+		{
+			IsDead.Value = true;
+		}
 	}
 }

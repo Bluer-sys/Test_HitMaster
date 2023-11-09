@@ -16,12 +16,13 @@
 				.AsSingle();
 			
 			// Bullet Pool
+			/*
 			Container
 				.BindMemoryPool< Bullet, Bullet.Pool >()
 				.WithInitialSize( 15 )
 				.ExpandByOneAtATime()
 				.FromComponentInNewPrefab( _gameplayConfig.BulletPrefab )
-				.UnderTransformGroup( "Bullet Pool" );
+				.UnderTransformGroup( "Bullet Pool" );*/
 		}
 	}
 }

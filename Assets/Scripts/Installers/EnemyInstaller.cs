@@ -17,6 +17,7 @@
 			// EnemyHealth
 			Container
 				.Bind<EnemyHealth>()
+				.FromComponentInHierarchy()
 				.AsSingle();
 		}
 	}

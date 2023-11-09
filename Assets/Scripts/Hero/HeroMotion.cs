@@ -32,16 +32,13 @@
 				_agent.SetDestination( waypoint.transform.position );
 				
 				IsMoving.Value = true;
-				Debug.Log( $"IsMoving: {IsMoving.Value}" );
 				
 				while ( !DestinationReached() )
 					yield return null;
 
 				IsMoving.Value = false;
-				Debug.Log( $"IsMoving: {IsMoving.Value}" );
 
-				//yield return waypoint.OnAllEnemyKilled.First();
-				yield return new WaitForSeconds( 3f );
+				yield return waypoint.OnAllEnemyKilled.First().ToYieldInstruction();
 
 				_current ++;
 			}

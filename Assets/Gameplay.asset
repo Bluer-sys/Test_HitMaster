@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b25d3159d7f4e219b45390359c594d5, type: 3}
   m_Name: Gameplay
   m_EditorClassIdentifier: 
+  BulletPrefab: {fileID: 0}
   BulletSpeed: 50
-  EnemyThrowForce: 50
+  BulletDamage: 1
+  EnemyThrowForce: 5

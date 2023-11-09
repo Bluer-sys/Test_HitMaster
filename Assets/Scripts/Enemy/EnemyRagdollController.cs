@@ -1,6 +1,7 @@
 ﻿namespace Game.Enemy
 {
 	using System.Collections.Generic;
+	using System.Linq;
 	using Game.Hero;
 	using UniRx;
 	using UnityEngine;
@@ -8,15 +9,21 @@
 
 	public class EnemyRagdollController : MonoBehaviour
 	{
-		[SerializeField] List<Rigidbody>	_ragdoll;
 		[SerializeField] Rigidbody			_mainBone;
 
+		[Inject] Animator		_animator;
 		[Inject] EnemyHealth	_enemyHealth;
 		[Inject] IHeroFacade	_heroFacade;
 		[Inject] GameplayConfig _gameplayConfig;
-		
+
+		List<Rigidbody>	_ragdoll;
+
 		void Start()
 		{
+			_ragdoll = GetComponentsInChildren<Rigidbody>().ToList();
+			
+			EnableRagdoll( false );
+
 			// On Dead
 			_enemyHealth.IsDead
 				.Where( v => v )
@@ -26,12 +33,18 @@
 
 		void ThrowRagdoll()
 		{
-			_ragdoll.ForEach( rb => rb.isKinematic = false );
+			EnableRagdoll( true );
 
 			Vector3 forceDir	= ( transform.position - _heroFacade.Transform.position ).normalized;
 			Vector3 force		= forceDir * _gameplayConfig.EnemyThrowForce;
 			
 			_mainBone.AddForce( force, ForceMode.VelocityChange );
+		}
+
+		void EnableRagdoll(bool state)
+		{
+			_ragdoll.ForEach( rb => rb.isKinematic = !state );
+			_animator.enabled = !state;
 		}
 	}
 }
