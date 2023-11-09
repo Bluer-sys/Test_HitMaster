@@ -16,6 +16,7 @@
 		
 		public void Initialize()
 		{
+			// Toggle Run State
 			_heroMotion.IsMoving
 				.Subscribe( v => _animator.SetBool( IsRun, v ) )
 				.AddTo( _lifetimeDisposables );

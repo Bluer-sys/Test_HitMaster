@@ -7,8 +7,8 @@
 
 	public class UiEnemyController : IInitializable, IDisposable
 	{
-		[Inject] IUiEnemyView	_view;
-		[Inject] EnemyHealth	_enemyHealth;
+		[Inject] readonly IUiEnemyView	_view;
+		[Inject] readonly EnemyHealth	_enemyHealth;
 
 		readonly CompositeDisposable _lifetimeDisposables = new();
 

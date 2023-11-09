@@ -7,10 +7,15 @@
 
 	public sealed class SceneInstaller : MonoInstaller
 	{
-		[Inject] GameplayConfig _gameplayConfig;
+		[Inject] readonly GameplayConfig _gameplayConfig;
 		
 		public override void InstallBindings()
 		{
+			// SceneController
+			Container
+				.BindInterfacesTo<SceneController>()
+				.AsSingle();
+			
 			// HeroFacade
 			Container
 				.BindInterfacesTo<HeroFacade>()

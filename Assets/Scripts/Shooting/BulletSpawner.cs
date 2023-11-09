@@ -8,8 +8,8 @@
 
 	public sealed class BulletSpawner : IInitializable, IDisposable
 	{
-		[Inject] Bullet.Pool	_bulletPool;
-		[Inject] IPlayerInput	_input;
+		[Inject] readonly Bullet.Pool	_bulletPool;
+		[Inject] readonly IPlayerInput	_input;
 
 		readonly CompositeDisposable _lifetimeDisposables = new();
 

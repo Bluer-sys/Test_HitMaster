@@ -24,7 +24,11 @@
 			StartCoroutine( Motion_Cor() );
 		}
 
-		public BoolReactiveProperty IsMoving { get; } = new();
+		
+		public BoolReactiveProperty IsMoving				{ get; } = new();
+		
+		public ReactiveCommand OnAllWaypointsReached		{ get; } = new();
+		
 		
 		IEnumerator Motion_Cor()
 		{
@@ -46,7 +50,7 @@
 				_current ++;
 			}
 
-			Debug.Log( "Finish!" );
+			OnAllWaypointsReached.Execute();
 		}
 		
 

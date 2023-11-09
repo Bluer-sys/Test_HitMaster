@@ -7,8 +7,8 @@
 
 	public sealed class Bullet : MonoBehaviour
 	{
-		[Inject] GameplayConfig _gameplayConfig;
-		[Inject] Bullet.Pool	_bulletPool;
+		[Inject] readonly GameplayConfig _gameplayConfig;
+		[Inject] readonly Bullet.Pool	_bulletPool;
 
 		Coroutine _lifetimeCor;
 		

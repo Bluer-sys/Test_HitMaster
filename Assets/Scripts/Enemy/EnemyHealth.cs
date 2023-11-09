@@ -12,11 +12,16 @@
 			Current.Value = _health;
 		}
 
+		
+#region Properties
+
 		public BoolReactiveProperty IsDead		{ get; } = new();
 		
 		public FloatReactiveProperty Current	{ get; } = new();
 		
 		public float Max						=> _health;
+
+#endregion
 		
 		
 #region IDamagable

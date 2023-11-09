@@ -8,6 +8,6 @@
 	{
 		[Inject] readonly EnemyHealth _enemyHealth;
 
-		public BoolReactiveProperty IsDead => _enemyHealth.IsDead;
+		public BoolReactiveProperty IsDead	=> _enemyHealth.IsDead;
 	}
 }

@@ -6,6 +6,9 @@
 	[CreateAssetMenu(menuName = "Configs/Gameplay", fileName = "Gameplay", order = 0)]
 	public sealed class GameplayConfig : ScriptableObject
 	{
+		[Header( "Scene" )] 
+		public float	RestartSceneDelay;
+		
 		[Header( "Hero" )] 
 		public float	HeroSpeed;
 			
@@ -17,6 +20,5 @@
 		public float	BulletSpeed;
 		public int		BulletDamage;
 		public float	BulletLifetime;
-		
 	}
 }

@@ -11,10 +11,10 @@
 	{
 		[SerializeField] Rigidbody			_mainBone;
 
-		[Inject] Animator		_animator;
-		[Inject] EnemyHealth	_enemyHealth;
-		[Inject] IHeroFacade	_heroFacade;
-		[Inject] GameplayConfig _gameplayConfig;
+		[Inject] readonly Animator			_animator;
+		[Inject] readonly EnemyHealth		_enemyHealth;
+		[Inject] readonly IHeroFacade		_heroFacade;
+		[Inject] readonly GameplayConfig	_gameplayConfig;
 
 		List<Rigidbody>	_ragdoll;
 
